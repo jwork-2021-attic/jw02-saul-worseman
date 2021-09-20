@@ -1,0 +1,75 @@
+@startuml
+class BubberSorter{
+    - int a[]
+    + load(int[] a)
+    + BubberSort()
+    - swap(int i, int j)
+    - String plan
+    + void sort()
+    + getPlan()
+}
+
+class Geezer{
+    {static} - Geezer theGeezer
+    {static} + getTheGeezer()
+    - Geezer()
+    - Sorter sorter
+    + setSorter(Sorter sorter)
+    + lineUp(Line line)
+    - parsePlan(String plan)
+    - execute(String step)
+}
+
+enum Gourd{
+    ONE
+    TWO
+    THREE
+    FOUR
+    FIVE
+    SIX
+    SEVEN
+    - int r
+    - int g
+    - int b
+    - Position position
+    ~ Gourd(int r, int g, int b)
+    {static} + getGourdByRank(int rank)
+    + rank()
+    + toString
+    + setPostion()
+    + swapPostion(Gourd another)
+    + getValue()
+}
+
+interface Linable{
+    + setPostion(Position position)
+    + Position getPostion()
+    + getValue()
+}
+class Line{
+    + Line(int length)
+    - Position[] positions
+    + put(Linable linable, int i)
+    + get(int i)
+    + toString()
+    + toArray()
+}
+
+class Postion{
+    - Linable linable
+    ~ Position(Lineable linable)
+    + setLinable(Linale linale)
+}
+
+interface Sorter{
+    + load(int[] elements)
+    + sort()
+    + getPlan()
+}
+
+class BubberSorter implements Sorter
+enum Gourd implements Linable
+Line +-- Postion
+Geezer *- Sorter
+Gourd *- Postion
+@enduml
