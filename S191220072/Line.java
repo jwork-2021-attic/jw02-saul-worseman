@@ -38,31 +38,31 @@ public class Line {
 
     }
 
-    // @Override
-    // public String toString() {
-    //     String lineString = "\t";
-    //     for (Position p : positions) {
-    //         lineString += p.linable.toString();
-    //     }
-    //     return lineString;
-    // }
-
     @Override
     public String toString() {
-        String lineString = "";
-        int timer = 0;
+        String lineString = "\t";
         for (Position p : positions) {
-            if(timer == 0)
-                lineString += "\t";
             lineString += p.linable.toString();
-            timer++;
-            if(timer == 8){
-                timer = 0;
-                lineString += "\n";
-            }
         }
         return lineString;
     }
+
+    // @Override
+    // public String toString() {
+    //     String lineString = "";
+    //     int timer = 0;
+    //     for (Position p : positions) {
+    //         if(timer == 0)
+    //             lineString += "\t";
+    //         lineString += p.linable.toString();
+    //         timer++;
+    //         if(timer == 8){
+    //             timer = 0;
+    //             lineString += "\n";
+    //         }
+    //     }
+    //     return lineString;
+    // }
 
     public Linable[] toArray() {
         Linable[] linables = new Linable[this.positions.length];
