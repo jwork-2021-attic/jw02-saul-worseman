@@ -24,7 +24,9 @@ public class Snake {
     public String lineUp(Line line) {
 
         String log = new String();
-
+        log = line.toString();
+        log += "\n[frame]\n";
+        
         if (sorter == null) {
             return null;
         }

@@ -5,7 +5,7 @@ class BubberSorter{
     + BubberSort()
     - swap(int i, int j)
     - String plan
-    + void sort()
+    + sort()
     + getPlan()
 }
 
@@ -67,9 +67,11 @@ interface Sorter{
     + getPlan()
 }
 
+Line o- Postion
+Postion o- Linable
 class BubberSorter implements Sorter
 enum Gourd implements Linable
 Line +-- Postion
 Geezer *- Sorter
-Gourd *- Postion
+Gourd o- Postion
 @enduml

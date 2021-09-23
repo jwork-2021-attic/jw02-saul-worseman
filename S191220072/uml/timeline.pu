@@ -1,3 +1,15 @@
 @startuml
 
+Gourd -[#green]> Line : Put some Gourd
+
+Line -> Postion : Set Linable
+
+Postion -> Gourd : Set Postion
+
+Geezer -[#green]> Sorter : Set the sorter
+
+Geezer -[#green]> Line : Line up
+
+Geezer -[#green]> Scene : Return log and print
+
 @enduml

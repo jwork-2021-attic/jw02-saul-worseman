@@ -3,7 +3,6 @@ package S191220072;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Iterator;
 
 public class Scene {
 
@@ -11,14 +10,14 @@ public class Scene {
         Line line = new Line(64);
         int i = 0;
         var it = MonsterArray.iterator();
-        while(it.hasNext() && i < 64){
+        while(it.hasNext()){
             line.put(it.next(),i);
             i++;
         }
 
         Snake theSnake = Snake.getTheSnake();
 
-        Sorter sorter = new BubbleSorter();
+        Sorter sorter = new QuickSorter();
 
         theSnake.setSorter(sorter);
 
