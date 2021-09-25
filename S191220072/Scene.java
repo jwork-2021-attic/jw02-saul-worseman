@@ -7,13 +7,13 @@ import java.io.IOException;
 public class Scene {
 
     public static void main(String[] args) throws IOException {
-        Line line = new Line(64);
-        int i = 0;
+        Matrix matrix = new Matrix(8,8);
         var it = MonsterArray.iterator();
-        while(it.hasNext()){
-            line.put(it.next(),i);
-            i++;
-        }
+        for(int i = 0; i < 8; i++)
+            for(int j = 0; j < 8; j++){
+                if(it.hasNext())
+                    matrix.put(it.next(),i,j);
+            }
 
         Snake theSnake = Snake.getTheSnake();
 
@@ -21,7 +21,7 @@ public class Scene {
 
         theSnake.setSorter(sorter);
 
-        String log = theSnake.lineUp(line);
+        String log = theSnake.lineUp(matrix);
 
         BufferedWriter writer;
         writer = new BufferedWriter(new FileWriter("result.txt"));
