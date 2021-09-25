@@ -1,6 +1,6 @@
 package S191220072;
 
-import S191220072.Line.Position;
+import S191220072.Matrix.Position;
 
 public class Monster implements Linable {
 

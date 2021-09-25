@@ -1,0 +1,88 @@
+@startuml
+class SelectSorter{
+    - int a[]
+    + load(int[] a)
+    + SelectSort()
+    - swap(int i, int j)
+    - String plan
+    + sort()
+    + getPlan()
+}
+
+class QuickSorter{
+    - int a[]
+    + load(int[] a)
+    - partition(int pivot, int first, int last)
+    + quickSort(int first, int last)
+    - swap(int i, int j)
+    - String plan
+    + sort()
+    + getPlan()
+}
+
+class Snake{
+    {static} - Snake theSnake
+    {static} + getTheSnake()
+    - Snake()
+    - Sorter sorter
+    + setSorter(Sorter sorter)
+    + lineUp(Matrix matrix)
+    - parsePlan(String plan)
+    - execute(String step)
+}
+
+class Monster{
+    - int r
+    - int g
+    - int b
+    - Position position
+    ~ Monster(int r, int g, int b)
+    + color()
+    + toString
+    + setPostion()
+    + swapPostion(Monster another)
+    + getValue()
+}
+
+class MonsterArray{
+    {static} ArrayList<Monster> monsters
+    {static} + getMonsterByColor(int color)
+    {static} + iterator()
+    
+}
+interface Linable{
+    + setPostion(Position position)
+    + Position getPostion()
+    + getValue()
+}
+class Matrix{
+    + Matrix(int row, int col)
+    - Position[][] positions
+    + put(Linable linable, int i, int j)
+    + get(int i, int j)
+    + toString()
+    + toArray()
+}
+
+class Postion{
+    - Linable linable
+    ~ Position(Lineable linable)
+    + setLinable(Linale linale)
+}
+
+interface Sorter{
+    + load(int[] elements)
+    + sort()
+    + getPlan()
+}
+
+Postion o- Linable
+Matrix o- Postion
+MonsterArray o- Monster
+class QuickSorter implements Sorter
+class SelectSorter implements Sorter
+class Monster implements Linable
+Matrix +-- Postion
+Snake *- Sorter
+Monster o- Postion
+@enduml
