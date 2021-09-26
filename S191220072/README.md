@@ -94,9 +94,13 @@
 
 将example的enum和根据rank查找Gourd改成了根据颜色查找。同时写了两个ConcreteSorter就可以了。
 
-[![asciicast](https://asciinema.org/a/tb8eHwIBlx3GbAQVeL3P9dkiI.svg)](https://asciinema.org/a/tb8eHwIBlx3GbAQVeL3P9dkiI)
+[![asciicast](https://asciinema.org/a/1eMkw7C22wCD0JhCGDHYnopIL.svg)](https://asciinema.org/a/1eMkw7C22wCD0JhCGDHYnopIL)](https://asciinema.org/a/tb8eHwIBlx3GbAQVeL3P9dkiI)
 
-这里选用的是SelectSort，根据颜色排序是按rgb的总和来的。但是因为terminal宽度温度没有录全。
+~~这里选用的是SelectSort，根据颜色排序是按rgb的总和来的。但是因为terminal宽度温度没有录全。~~
+
+这里依然选用SelectSort，**为了做出渐变的效果，重新定义了排序的value值，以及重写随机颜色生成的代码**
+
+**这段视频是用我本机的代码直接改录，没有重新上传到github，所以github上的打M2Tag的代码没有重新定义排序的value值，其余一样。但是M3是重新组织上传了的。**
 
 ## 任务三
 
@@ -106,6 +110,8 @@
 
 更新：将Line改成Matrix，并将postion改为二维数组，同时修改Snake接受的排序对象。
 
-[![asciicast](https://asciinema.org/a/9QE6XfSbhPwTtCcMByaI9mH6h.svg)](https://asciinema.org/a/9QE6XfSbhPwTtCcMByaI9mH6h)
+
+
+[![asciicast](https://asciinema.org/a/tJ08Wzw839IU2WFvXxEGROQot.svg)](https://asciinema.org/a/tJ08Wzw839IU2WFvXxEGROQot)](https://asciinema.org/a/9QE6XfSbhPwTtCcMByaI9mH6h)
 
 这是快排的8x8,我稍做了修改，不再是挖去pivot然后最后空出来的位置填上，而是将pivot一直参与交换，但本质还是快排没错。
