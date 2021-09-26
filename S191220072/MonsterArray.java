@@ -1,5 +1,6 @@
 package S191220072;
 import java.util.*;
+import S191220072.Matrix.Position;
 public class MonsterArray {
     static ArrayList<Monster> monsters = new ArrayList<>();
     static{

@@ -110,8 +110,6 @@
 
 更新：将Line改成Matrix，并将postion改为二维数组，同时修改Snake接受的排序对象。
 
-
-
 [![asciicast](https://asciinema.org/a/tJ08Wzw839IU2WFvXxEGROQot.svg)](https://asciinema.org/a/tJ08Wzw839IU2WFvXxEGROQot)](https://asciinema.org/a/9QE6XfSbhPwTtCcMByaI9mH6h)
 
 这是快排的8x8,我稍做了修改，不再是挖去pivot然后最后空出来的位置填上，而是将pivot一直参与交换，但本质还是快排没错。
