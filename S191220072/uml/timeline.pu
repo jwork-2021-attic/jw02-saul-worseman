@@ -1,0 +1,27 @@
+@startuml
+
+Gourd -[#green]> Line : Put some Gourd
+
+Line -> Postion : Set Linable
+
+Postion -> Gourd : Set Postion
+
+Geezer -[#green]> BubbleSorter : Set the sorter
+
+Geezer -[#green]> Line : Line up
+
+Line -> Geezer : Return an array according to its value
+
+Geezer -> Sorter : An array to sort
+
+BubbleSorter -> BubbleSorter : Sort and get the Plan
+
+BubbleSorter -> Geezer : Return the Sorting plan
+
+Geezer -> Gourd : Swap Postion according to my Plan
+
+
+
+Geezer -[#green]> Scene : Return log and print
+
+@enduml
